@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Checkbox</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Default</ion-label>
+    <ion-checkbox></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Disabled</ion-label>
+    <ion-checkbox disabled="true"></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Disabled + Checked</ion-label>
+    <ion-checkbox disabled="true" checked="true"></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Cor</ion-label>
+    <ion-checkbox color="danger" checked="true"></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Cor sem checked</ion-label>
+    <ion-checkbox color="dark"></ion-checkbox>
+  </ion-item>
+
+  <ion-list>
+    <ion-item *ngFor= "let mes of meses">
+      <ion-label>{{mes.mes}}</ion-label>
+      <ion-checkbox [(ngModel)]="mes.marcado" checked={{mes.marcado}}></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" (click)="verificar()">Verificar</ion-button>
+
+</ion-content>

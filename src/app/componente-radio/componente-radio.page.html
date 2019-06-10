@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Radio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-radio-group [(ngModel)]="opcao">
+      <ion-header><h5>Opções</h5></ion-header>
+
+      <ion-item>
+        <ion-label><strong>Biff</strong></ion-label>
+        <ion-radio name="opcao"  value="biff" color="danger"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label><strong>Griff</strong></ion-label>
+        <ion-radio name="opcao"  value="griff" color="danger"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label><strong>Bufford</strong></ion-label>
+        <ion-radio name="opcao"  value="bufford" color="danger"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label><strong>Disabled</strong></ion-label>
+        <ion-radio name="opcao"  value="disabled" color="danger" disabled="true"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+
+    <ion-button expand="full" (click)="verificar()">verificar</ion-button>
+  </ion-list>
+
+</ion-content>

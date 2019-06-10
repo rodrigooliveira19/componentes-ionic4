@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Componente Select</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header><strong>Select Simples</strong></ion-list-header>
+    <ion-item>
+      <ion-label>Sexo</ion-label>
+      <ion-select placeHolder="Selecione" [(ngModel)]="sexoSelecionado">
+        <ion-select-option *ngFor="let s of sexo">{{s}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button expand="block" color="danger" (click)="valorSexo()">Ver valor</ion-button>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header><strong>Select Simples</strong></ion-list-header>
+    <ion-item>
+      <ion-label>Cores</ion-label>
+      <ion-select placeHolder="Selecione" [(ngModel)]="cor" okText="Ok" cancelText="Cancelar">
+        <ion-select-option value="Azul">Azul</ion-select-option>
+        <ion-select-option value="Branco">Branco</ion-select-option>
+        <ion-select-option value="Preto">Preto</ion-select-option>
+        <ion-select-option value="Vermelho">Vermelho</ion-select-option>
+        <ion-select-option value="Verde">Verde</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button expand="block" color="success" (click)="valorCor()">Ver valor</ion-button>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header><strong>Select Multiplo</strong></ion-list-header>
+    <ion-item>
+      <ion-label>Cores</ion-label>
+      <ion-select multiple="true" placeHolder="Selecione" [(ngModel)]="cor" okText="Ok" cancelText="Cancelar">
+        <ion-select-option value="Azul">Azul</ion-select-option>
+        <ion-select-option value="Branco">Branco</ion-select-option>
+        <ion-select-option value="Preto">Preto</ion-select-option>
+        <ion-select-option value="Vermelho">Vermelho</ion-select-option>
+        <ion-select-option value="Verde">Verde</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button expand="block" color="dark" (click)="valorCor()">Ver valor</ion-button>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header><strong>Select Com opção Selecionada</strong></ion-list-header>
+    <ion-item>
+      <ion-label>Cores</ion-label>
+      <ion-select multiple="true" placeHolder="Selecione" [(ngModel)]="cor" okText="Ok" cancelText="Cancelar">
+        <ion-select-option value="Azul">Azul</ion-select-option>
+        <ion-select-option value="Branco">Branco</ion-select-option>
+        <ion-select-option value="Preto" selected>Preto</ion-select-option>
+        <ion-select-option value="Vermelho">Vermelho</ion-select-option>
+        <ion-select-option value="Verde" selected>Verde</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button expand="block" color="warning" (click)="valorCor()">Ver valor</ion-button>
+  </ion-list>
+
+  <ion-item>
+    <ion-label>Pets</ion-label>
+    <ion-select multiple="true">
+      <ion-select-option value="bird" selected>Bird</ion-select-option>
+      <ion-select-option value="cat">Cat</ion-select-option>
+      <ion-select-option value="dog" selected>Dog</ion-select-option>
+      <ion-select-option value="honeybadger">Honey Badger</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-list>
+      <ion-item>
+        <ion-label>Cores</ion-label>
+        <ion-select [interfaceOptions]="customAlertOptions" interface="alert" placeHolder="Selecione" [(ngModel)]="cor" okText="Ok" cancelText="Cancelar">
+          <ion-select-option value="Azul">Azul</ion-select-option>
+          <ion-select-option value="Branco">Branco</ion-select-option>
+          <ion-select-option value="Preto" >Preto</ion-select-option>
+          <ion-select-option value="Vermelho">Vermelho</ion-select-option>
+          <ion-select-option value="Verde">Verde</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-button expand="block" color="medium" (click)="valorCor()">Ver valor</ion-button>
+    </ion-list>
+
+
+</ion-content>

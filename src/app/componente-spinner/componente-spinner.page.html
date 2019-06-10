@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Spinner</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-spinner></ion-spinner>
+
+  <!-- Default Spinner -->
+  <ion-spinner></ion-spinner>
+
+  <!-- Lines -->
+  <ion-item>
+    <ion-label>Download</ion-label>
+    <ion-spinner slot="start" name="lines" paused={{go}}></ion-spinner>
+  </ion-item>
+
+  <ion-button expand="block" (click)="goo()"></ion-button>
+
+  <!-- Lines Small -->
+  <ion-item>
+    <ion-spinner name="lines-small"></ion-spinner>
+  </ion-item>
+
+  <!-- Dots -->
+  <ion-item>
+    <ion-spinner name="dots"></ion-spinner>
+  </ion-item>
+
+  <!-- Bubbles -->
+  <ion-item>
+    <ion-spinner name="bubbles"></ion-spinner>
+  </ion-item>
+
+  <!-- Circles -->
+  <ion-item>
+    <ion-spinner name="circles"></ion-spinner>
+  </ion-item>
+
+  <!-- Crescent -->
+  <ion-item>
+    <ion-spinner name="crescent" ></ion-spinner>
+  </ion-item>
+
+  <!-- Paused Default Spinner -->
+  <ion-item>
+    <ion-spinner paused></ion-spinner>
+  </ion-item>
+
+</ion-content>

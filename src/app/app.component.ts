@@ -16,9 +16,39 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
+      title: 'Instalação',
+      url: '/instalacao',
+      icon: 'hammer'
+    },
+    {
+      title: 'Layout',
+      url: '/layout',
+      icon: 'apps'
+    },
+    {
+      title: 'Componentes',
+      url: '/componentes',
+      icon: 'apps'
+    },
+    {
+      title: 'Nossa Gelada',
+      url: '/layout-nossa-gelada',
+      icon: 'apps'
+    },
+    {
+      title: 'Todo Conahack',
+      url: '/app-todoconahack',
+      icon: 'apps'
+    },
+    {
+      title: 'Componentes Nativos',
+      url: '/componentes-nativos',
+      icon: 'apps'
+    },
+    {
+      title: 'Animações',
+      url: '/animacoes',
+      icon: 'apps'
     }
   ];
 

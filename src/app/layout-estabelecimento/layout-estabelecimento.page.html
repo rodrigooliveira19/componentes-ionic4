@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cadastrar Estabelecimeto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label color="warning" position="floating">Informe o Estabelecimento</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label color="warning" position="floating">Localização</ion-label>
+      <ion-input></ion-input>
+  </ion-item>
+
+  <br><br><br><br><br><br><br><br>
+
+  <ion-button expand="full"  color="warning" (click)="getEstabelecimentos()">Salvar</ion-button>
+
+  <br><br>
+  <h3>Resultado</h3>
+  {{resultado}}
+
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Searchbar-Youtube</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-searchbar animated placeholder="Buscar" (ionChange)="buscar($event)"></ion-searchbar>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let pessoa of pessoas | filtro: nome">
+      {{pessoa.nome}}
+    </ion-item>
+  </ion-list>
+
+</ion-content>
