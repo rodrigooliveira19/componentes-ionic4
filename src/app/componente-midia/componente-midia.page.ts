@@ -12,49 +12,50 @@ export class ComponenteMidiaPage implements OnInit {
 
   private stopGravacao :boolean = false; 
   private file : MediaObject; 
+  private cont: number = 0; 
+  private auxCont: number; 
+  private name: string; 
 
   constructor(private media: Media, 
               private toastCtrl: ToastController) { }
 
   ngOnInit() {
-    this.file  = this.media.create("file.mp3"); 
   }
 
   async gravar() {
     if (!this.stopGravacao) {
+      this.file = this.media.create(this.name+".mp3"); 
       let toast = await this.toastCtrl.create({
-        message: 'Iniciando Gravação', 
-        duration: 3000
+        message: 'Iniciando Gravação '+this.name, 
+        duration: 2000
       }); 
   
       toast.present(); 
 
       this.file.startRecord(); 
-      this.file.onStatusUpdate.subscribe(status => console.log(status));
-      this.file.onSuccess.subscribe(() => console.log('Action is successful'));
+      
       this.stopGravacao = true;  
 
     } else {
       let toast = await this.toastCtrl.create({
-        message: 'Finalizando gracação', 
-        duration: 3000
+        message: 'Finalizando gravação '+this.name, 
+        duration: 2000
       }); 
   
       toast.present(); 
 
       this.file.stopRecord(); 
-      this.file.onStatusUpdate.subscribe(status => console.log(status));
-      this.file.onSuccess.subscribe(() => console.log('Action is successful'));
-      console.log(this.file); 
       
     }
   }
 
   async lerAudio() {
+
     if (this.stopGravacao) {
+      this.file = this.media.create(this.name+".mp3"); 
       let toast = await this.toastCtrl.create({
-        message: 'Iniciando Leitura de audio', 
-        duration: 3000
+        message: 'Iniciando Leitura de audio '+this.name, 
+        duration: 2000
       }); 
   
       toast.present(); 
@@ -65,13 +66,14 @@ export class ComponenteMidiaPage implements OnInit {
 
     }else {
       let toast = await this.toastCtrl.create({
-        message: 'Finalizando Leitura de audio', 
-        duration: 3000
+        message: 'Finalizando Leitura de audio '+this.name, 
+        duration: 2000
       }); 
   
       toast.present(); 
 
       this.file.stop(); 
+      this.stopGravacao = true; 
     }
   }
 

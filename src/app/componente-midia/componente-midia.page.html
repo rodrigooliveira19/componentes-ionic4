@@ -9,15 +9,18 @@
 
 <ion-content>
   <ion-toolbar>
-      <ion-label (click)="gravar()" slot="end">
-          <ion-icon name="microphone"></ion-icon>
-      </ion-label>
-      <ion-label (click)="lerAudio()">
-          <ion-icon name="arrow-dropright"></ion-icon>
-      </ion-label>
+    <ion-label (click)="gravar()" slot="end">
+      <ion-icon name="microphone"></ion-icon>
+    </ion-label>
+    <ion-label (click)="lerAudio()">
+      <ion-icon name="arrow-dropright"></ion-icon>
+    </ion-label>
   </ion-toolbar>
-  
-    
-  
+
+  <ion-item>
+    <ion-label position="floating">Nome</ion-label>
+    <ion-input [(ngModel)]="name"></ion-input>
+  </ion-item>
+  {{name}}
 
 </ion-content>
