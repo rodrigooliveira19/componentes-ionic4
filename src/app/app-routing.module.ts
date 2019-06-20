@@ -145,7 +145,8 @@ const routes: Routes = [
 
   { path: 'modal-page-interno', 
     loadChildren: './modal-page-interno/modal-page-interno.module#ModalPageInternoPageModule' },
-  { path: 'animacoes', loadChildren: './animacoes/animacoes.module#AnimacoesPageModule' },
+  { path: 'animacoes', loadChildren: './animacoes/animacoes.module#AnimacoesPageModule' },  { path: 'componente-midia', loadChildren: './componente-midia/componente-midia.module#ComponenteMidiaPageModule' },
+
 
   
 ];
