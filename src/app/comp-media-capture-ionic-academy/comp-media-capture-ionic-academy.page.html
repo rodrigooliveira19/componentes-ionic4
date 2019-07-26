@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Media Capture</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-button expand="block" (click)="captureAudio()">Capture Aúdio</ion-button>
+    <ion-button expand="block" color="dark" (click)="captureVideo()">Capture Vídeo</ion-button>
+
+  <!--
+    <ion-row>
+    <ion-col>
+     
+    </ion-col>
+    <ion-col>
+      
+    </ion-col>
+  </ion-row>
+  -->
+
+  <ion-list>
+    <ion-item *ngFor="let file of mediaFiles" tappable (click)="play(file)" text-wrap>
+      {{ file.name }}
+      <p>{{ file.size / 1000 / 1000 | number }} MB</p>
+    </ion-item>
+  </ion-list>
+
+  <video controls autoplay #myVideo>
+  </video>
+
+</ion-content>

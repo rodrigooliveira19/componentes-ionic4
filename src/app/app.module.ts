@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage';
 import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
 
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -29,7 +30,7 @@ import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, 
-    TextToSpeech
+    TextToSpeech,
   ],
   bootstrap: [AppComponent]
 })

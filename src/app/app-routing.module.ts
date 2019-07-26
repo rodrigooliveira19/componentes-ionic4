@@ -146,6 +146,8 @@ const routes: Routes = [
   { path: 'modal-page-interno', 
     loadChildren: './modal-page-interno/modal-page-interno.module#ModalPageInternoPageModule' },
   { path: 'animacoes', loadChildren: './animacoes/animacoes.module#AnimacoesPageModule' },  { path: 'componente-midia', loadChildren: './componente-midia/componente-midia.module#ComponenteMidiaPageModule' },
+  { path: 'componente-media-capture', loadChildren: './componente-media-capture/componente-media-capture.module#ComponenteMediaCapturePageModule' },
+  { path: 'comp-media-capture-ionic-academy', loadChildren: './comp-media-capture-ionic-academy/comp-media-capture-ionic-academy.module#CompMediaCaptureIonicAcademyPageModule' },
 
 
   
